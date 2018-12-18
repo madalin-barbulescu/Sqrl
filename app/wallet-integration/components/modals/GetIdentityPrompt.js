@@ -16,7 +16,7 @@ export default class GetIdentityPrompt extends Component<Props> {
 
       const messages = {
         "app": payload.origin,
-        "with key": request.appkey,
+        "with key": payload.data.appkey,
         "using network": payload.fields.accounts.map((a) => { return {
           blockchain: a.blockchain,
           chainId: a.chainId
